@@ -1,0 +1,379 @@
+public class Task01 {
+    public static void main(String[] args) {
+        /* TASK->
+		 Ask user to enter mid-term grade, final grade, and project grade
+		 Calculate the general grade (mid-term : 30% , project : 20%, final : 50%)
+​
+		  Example:
+		      INPUT: mid-term grade=78
+		      		 final grade = 66
+		      		 project grade = 90
+		      OUTPUT: "Your grade is : 81,6"
+		 */
+        Scanner input= new Scanner(System.in);
+        System.out.print("enter mid-term grade :");
+        int mid= input.nextInt();
+​
+        System.out.print("enter final grade :");
+        int fin= input.nextInt();
+​
+        System.out.print("enter project grade :");
+        int pro= input.nextInt();
+​
+        double grade= (3*mid/10)+(pro/5)+(fin/2);
+        System.out.println("Your grade is : " + grade);
+    }
+}
+​
+public class Task02 {
+    public static void main(String[] args) {
+        /*
+         * TASK ->
+         *
+         * Kullanicidan boyunu cm olarak, kilosunu kilogram olarak alin
+         * ve vucut kutle endeksini bulun.
+         * Sonucu tamsayi ve ondalikli sayi olarak yazdirin
+         *
+         * VKE= kilo/(boy*boy) …….. Kilo : kilogram , Boy : metre olmalidir
+         *
+         * Ornek : Input : boy :180 kilo : 80
+         *         Output : Vucut kutle endeksiniz : 24
+         *                  Vucut kutle endeksiniz : 24.691…
+         *
+         *
+         */
+        Scanner input= new Scanner(System.in);
+        System.out.print("boyunuzu kaç cm : ");
+        double boy= input.nextInt();
+​
+        System.out.print("kg cinsinden ağırlığınızı yazınız : ");
+        double kilo= input.nextInt();
+​
+        double vki1= (int) (kilo/((boy*boy)/10000));
+        double vki2= kilo/((boy*boy)/10000);
+        System.out.println("Vucut kutle endeksiniz : " + vki1+"\nVucut kutle endeksiniz : " + vki2);
+    }
+}
+​
+public class Task03 {
+    public static void main(String[] args) {
+        /*
+         * TASK->
+         *
+         * Kullaniciya gunde kac saat uyudugunu sorun,
+         * ayda yilda ve 40 yilda kac gununun uykuda gectigini yazdirin
+         *
+         * Ornek : Input : 8
+         *         Output : Ayda 10, yilda 121, 40 yilda 4866 gununuz uykuda geciyor
+         */
+        Scanner input= new Scanner(System.in);
+        System.out.print("gunde kac saat uyuyorsunuz ? ");
+        int uyku= input.nextInt();
+        System.out.println("Ayda: " + uyku*30/24+", Yilda: " + uyku*365/24+", 40 Yilda: " + uyku*365*40/24+" gününüz uykuda geçiyor.");
+    }
+}
+​
+public class Task04 {
+    public static void main(String[] args) {
+        /* TASK ->
+        Clarusway spor salonu için kullanıcıdan isim soyisim, yaş, kilo, boy, salona devam edeceği ay süresini
+        bilgilerini alıp aylık $20 olarak toplam ücretini hesplayıp print eden code create ediniz.
+         */
+        Scanner input= new Scanner(System.in);
+        System.out.print("adınızı giriniz : ");
+        String ad= input.nextLine();
+        System.out.print("soyadınızı giriniz : ");
+        String soyad= input.nextLine();
+        System.out.print("yaşnızı giriniz : ");
+        int yas= input.nextInt();
+        System.out.print("kg cinsinden ağırlığınızı yazınız : ");
+        int kilo= input.nextInt();
+        System.out.print("boyunuzu kaç cm : ");
+        int boy= input.nextInt();
+        System.out.print("salona kaç ay devam edeceksiniz ? ");
+        int ay= input.nextInt();
+        System.out.println("Sayın "+ad+" "+soyad+" salon ücretiniz = "+ay*20+"$");
+    }
+}
+​
+public class Task05 {
+	public static void main(String[] args) {
+		// kullanicidan 2 tam sayi alip bu 2 tamsayinin  dort islem sonucunu yazdiriniz.
+		Scanner input= new Scanner(System.in);
+		System.out.print("bir tamsayı giriniz : ");
+		int sayi1= input.nextInt();
+		System.out.print("ikinci bir tamsayı giriniz : ");
+		int sayi2= input.nextInt();
+		System.out.println("Toplama Sonucu: "+(sayi1+sayi2)+"\nÇıkarma Sonucu: "+(sayi1-sayi2)+"\nÇarpma Sonucu: "+(sayi1*sayi2)+"\nBölme Sonucu: "+(sayi1/sayi2));
+	}
+}
+​
+public class Task06 {
+    public static void main(String[] args) {
+    /*  Problem Tanımı
+        Bir dik üçgenin iki dik kenarını alarak hipotenüsünü hesaplayan kod yazınız.
+        Örnek Ekran Çıktısı
+        birinci kenar: 12
+        ikinci kenar: 5
+        hipotenus: 13      */
+        Scanner input= new Scanner(System.in);
+        System.out.print("birinci dik kenar uzunluğunu giriniz : ");
+        int dik1= input.nextInt();
+        System.out.print("ikinci dik kenar uzunluğunu giriniz : ");
+        int dik2= input.nextInt();
+        System.out.print("hipotenüs: "+Math.sqrt(dik1*dik1+dik2*dik2));
+    }
+}
+​
+public class Task07 {
+    public static void main(String[] args) {
+    /*  Problem Tanımı
+        Mesafeyi ve hızı alıp süreyi hesaplayan bir kod yazınız.
+        Örneğin:İstanbul ile Ankara arası 400km olarak ölçülmektedir. Bu yolu ortalama
+        120 km/saat hızla giden bir araç ne kadar sürede hedefe varır?
+​
+        Örnek Ekran Çıktısı
+        Mesafeyi giriniz: 400
+        Hızı giriniz: 100
+        Süre 4 saattir.
+     */
+        7*fin/10)
+        System.out.print("mesafeyi km olarak giriniz : ");
+        int km= input.nextInt();
+        System.out.print("hızı km/saat olarak giriniz : ");
+        int hiz= input.nextInt();
+        System.out.print("süre "+km/hiz+" saattir. ");
+    }
+}
+​
+public class Task08 {
+    public static void main(String[] args) {
+        /*
+         * Kullanicidan alacaginiz vize1 vize2 ve final notlarini
+         * vize ortalamasinin %30'u final notunun %70 alarak gecme notunu hesaplayiniz
+         */
+        Scanner input= new Scanner(System.in);
+        System.out.print("vize1 notunu giriniz : ");
+        int vize1= input.nextInt();
+​
+        System.out.print("vize2 notunu giriniz : ");
+        int vize2= input.nextInt();
+​
+        System.out.print("final notunu giriniz : ");
+        int fin= input.nextInt();
+​
+        double grade= (3*(vize1+vize2)/20)+(7*fin/10);
+        System.out.println("Your grade is : " + grade);
+    }
+}
+​
+public class Task09 {
+    public static void main(String[] args) {
+​
+    /*  Problem Tanımı
+        Kullanıcıdan a,b ve c sayılarını okuyarak aşağıdaki işlemi yapan kodu yazınız
+        a'nın karesinden b'nin karesini cikarip c nin 3 katina bölümünü bolunuz
+​
+        Örnek Ekran Çıktısı
+        a sayısını giriniz: 5
+        b sayısını giriniz: 3
+        c sayısını giriniz: 1
+        sonuç : 5.333333333333333
+        */
+        Scanner input= new Scanner(System.in);
+        System.out.print("bir tamsayı giriniz : ");
+        double a= input.nextInt();
+        System.out.print("ikinci bir tamsayı giriniz : ");
+        double b= input.nextInt();
+        System.out.print("üçüncü bir tamsayı giriniz : ");
+        double c= input.nextInt();
+        System.out.print("sonuç: "+((a*a-b*b)/(3*c)));
+    }
+}
+
+**********************************************************************************************
+public class Task10 {
+    public static void main(String[] args) {
+// Write a Java program to convert temperature from Fahrenheit to Celsius degree.
+// formula
+    // c = (f-32)*5/9
+
+        Scanner input= new Scanner(System.in);
+        System.out.print("Fahrenheit dereceyi giriniz : ");
+        double fah= input.nextInt();
+        System.out.print("temperature is "+((fah-32)*5/9)+" Celsius degree.");
+
+         /*   Bir integer oluşturun ve değeri 13 olsun.
+                        Başka bir integer daha oluşturun ve değeri 10 olsun.
+                        Print kodunun içine Ilk int ,ikinci int'ten büyüktür yazın. (>,< simgeleri ile)
+                        Console' da 'true' yazısını görmelisiniz.        */
+
+                //Kodu aşağıya yazınız.
+
+                int a=13;
+                int b=10;
+                System.out.println(a>b);
+
+              /*    İki ayrı integer oluşturun.
+                    İlk integerin değeri 17,
+                    İkinci integerin değeri 20 olsun.
+                    Print kodunun içine, ilk int ikinci int'ten küçüktür yazın.(<,> simgeleri ile)
+                    Console'da true yazısını görmelisiniz. */
+
+                // Kodu buraya yazınız.
+                int x=17;
+                int y=20;
+                System.out.println(x<y);
+
+                   /* İki integer oluştur.
+                   İkisinin de değeri 13 olsun.
+                   Print kodunun içine, ilk int ikinci inte küçük veya eşittir yazın ve yazdırın.
+                   Console'da true yazısını görmelisiniz.
+                   Örnek:   15>=15  */
+
+                // Kodu aşağıya yazınız.
+
+                int d=13;
+                int c=13;
+                System.out.println(d<=c);
+
+         /* İki integer oluştur.
+                   İkisinin de değeri 13 olsun.
+                   Print kodunun içine, ilk int ikinci inte küçük veya eşittir yazın ve yazdırın.
+                   Console'da true yazısını görmelisiniz.
+                   Örnek:   15>=15  */
+
+                // Kodu aşağıya yazınız.
+
+                int d=13;
+                int c=13;
+                System.out.println(d<=c);
+
+        /*    Oluşturulan double'lar hakkında (num1, num2)
+                  birbirine eşit olup olmadıklarını doğrulayın.
+                  Eğer eşitlerse konsolda true yazacaktır.  */
+
+                 Scanner dp = new Scanner(System.in);
+
+                 double num1 = dp.nextDouble();
+                 double num2 = dp.nextDouble();
+
+                // Kodu aşağıya yazınız. BU SATIRIN YUKARISINI DEĞİŞTİRMEYİNİZ.
+
+                System.out.println(num1==num2);
+
+            /*    2 tane String oluşturun.
+                  String 1 "Apple" String 2 "Apple"
+                  İlk String'in değeri "Apple" , ikinci String'in değeri de "Apple"  olmalı.
+                String1'in String2'ye eşit olduğunu doğrulayın.  */
+
+                // Kodu aşağıya yazdırınız.
+                String name1="Apple";
+                String name2="Apple";
+                System.out.println(name1==name2);
+
+                /*  İki tane float oluşturun. Birinci float 14, ikinci float 17'dir.
+                    Birinci float'un, ikinci float'dan büyük eşit olduğunu veya  büyük olduğunu yada olmadığını doğrulayın.
+                    Sonucu yazdırınız. */
+
+                //Kodu aşağıya yazınız.
+
+                float a=14;
+                float b=17;
+                System.out.println(a>=b||a>b||a<b);
+
+                /*  2 double oluşturun.
+                    İlk double'ın değeri 14.23, ikinci double'ın değeri 19.52 olmalı.
+                    Double1'in double2'ye eşit olmadığını doğrulayın.
+                    Eğer eşit değilse cevap true olmalı.
+                    Cevabı yazdırınız.  */
+
+                // Kodu aşağıya yazınız.
+                double num1=14.23;
+                double num2=19.52;
+                System.out.println(num1!=num2);
+                /*  2 double oluşturun.
+                    İlk double'ın değeri 14.23, ikinci double'ın değeri 19.52 olmalı.
+                    Double1'in double2'ye eşit olmadığını doğrulayın.
+                    Eğer eşit değilse cevap true olmalı.
+                    Cevabı yazdırınız.  */
+
+                // Kodu aşağıya yazınız.
+                double num1=14.23;
+                double num2=19.52;
+                System.out.println(num1!=num2);
+
+            /*    2 String oluşturunuz.
+                  İlk String'in değeri "Techno Study", ikinci String'in değeri de "Techno Study" olsun.
+                  İlk String'in ikinci String'e eşit olmadığını doğrulayın. örn: (  !=    işareti ile)
+                  Eğer eşit değilse cevap true, eğer eşitse cevap false olacaktır.
+                  Cevabı yazdırın.  */
+
+                //Kodu aşağıya yazınız.
+
+                  String name1="Techno Study";
+                  String name2="Techno Study";
+                  System.out.println(name1!=name2);
+
+            /*    2 double oluşturun.
+                  İkisinin de değeri 14.23 olsun.
+                  Double1'in double2 'den küçük olup olmadığını doğrulayın.(Eğer küçükse konsolda 'true' yazacaktır.)
+                  Cevabı yazdırın.  */
+
+                //  Kodu aşağıya yazınız.
+
+                double num1=14.23;
+                double num2=14.23;
+                System.out.println(num1<num2);
+
+            /*  2 int oluşturun. int 1 'in değeri 120,
+                int 2'nin değeri 158 olmalı.
+                int 1 'in int 2'den büyük olup olmadığını doğrulayın.
+                (Eğer int1, int2'den büyükse konsolda true sonucu vermeli.)
+                Cevabı yazdırın.  */
+
+                // Kodu aşağıya yazınız.
+
+                int num1=120;
+                int num2=158;
+                System.out.println(num1<num2);
+
+
+*********************************************************************************************
+  */
+        Print "Lutfen is unvaninizi girin
+        jobTitle isimli bir degisken olusturun ve kullanicidan isteyin.
+        Dogru jobTitle yazdirmak icin asagidaki test datalarini kullanin.
+        Example :
+        Eger jobTitle  qa ise print is unvaniniz Quality Analyst
+        test data: qa ise print Quality Analyst
+        dev ise print Developer
+        ba ise print Business Analyst
+        pm ise print Project Manager
+                */
+        Q06_IfStatement
+         /*
+   not hesaplayici
+              A => 90 ~100
+              B => 80 ~ 89
+              C => 70 ~ 79
+              D => 60 ~ 69
+              F =>  0 ~ 59
+              sartlari aralik belirterek yaziniz
+     write a program that:
+        1. 0 ~12 ==> good morning
+        2. 12 ~ 15 ==> good afternoon
+        3. 15 ~ 23 ==> good night
+        4. 12 ==> good noon
+    */
+                Q07_IfStatement
+  /*
+        Problem tanimi :
+        Kullanicidan  yasini ve kilosunu aliniz
+        18 yasindan kucuk ise kan bagisi yapamaz
+        18 yasindann buyuk ve 50 kilo dan hafif ise kan bagisi yapamaz.
+        18 yasindan buyuk ve 50 ve 50 kilodan agir ise kan bagisi yapabilir.
+         */
+
+
+   https://www.scrum.org/open-assessments/scrum-open
